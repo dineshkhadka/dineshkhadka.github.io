@@ -15,11 +15,21 @@ html {
     font-size: 1em;
     line-height: 1.4;
     background-color: #7e7e7e;
-    background: url("../img/background7.jpg") no-repeat center center fixed;
+    /*
+        Server rendered pages like opera mini (extremely popular in Nepal)
+        wont have a fixed background
+        repeat the image to avoid any white backgrounds as the user scrolls down
+    */
+    background: url("../img/background7.jpg") center center fixed;
     background-size: cover;
+    /*
+        Set the default postion to 0px to make sure the darker parts of the
+        images are under the title to compensate for dim brightness on mobile phones
+    */
+    background-position: 0px;
     width: 100%;
     height: 100%;
-    font-family: source-sans;
+    font-family: raleway-normal;
     margin:0;
 
 }
@@ -32,19 +42,21 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #999;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #999;
     text-shadow: none;
 }
 
 /*
  * A better looking default horizontal rule
  */
-
+ul{
+    margin: 0;
+}
 hr {
     display: block;
     height: 1px;
@@ -88,20 +100,17 @@ textarea {
 }
 p{
 
-    font-family: source-sans;
+    font-family: raleway-normal;
 }
 button{
     border-radius: 3px;
     border: 0;
-    padding: 15px;
+    padding: 10px;
 
 }
 a{
     text-decoration: none;
     color: #757575;
-}
-ul{
-    margin:0;
 }
 /* ==========================================================================
    Browser Upgrade Prompt
@@ -118,29 +127,49 @@ ul{
    Author's custom styles
    ========================================================================== */
 
-.container{
-    height: 100%;
-    min-width: 960px;
 
-}
 
 .main-body{
+    clear: both;
+    width: 80%;
+    height: 100%;
 
-    margin-top: 2%;
-    margin-left: 250px;
+    margin: 0px auto;
 }
 .main-body a{
-    color: #fff;
+    color: #A1a1a1;
 }
-.main-body a:hover{
-    opacity: 0.70;
-}
-#main-page{
 
+#main-page{
     width: 100%;
+    height: 100%;
 }
-.features-page{
-margin-top: 20px;
+.animate{
+    -webkit-animation-name: pagefade;
+    -webkit-animation-duration: 1s;
+
+}
+@-webkit-keyframes pagefade{
+    0% {opacity: 0.60;}
+}
+
+#main-page a:hover{
+    color: white !important;
+}
+#features-page{
+    font-family: raleway-normal;
+}
+
+.text-background{
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.40);
+    border-radius: 5px;
 
 }
 .content{
@@ -151,56 +180,59 @@ border-bottom: 1px solid #25242c;
 }
 .title{
 
-    font-family: roboto-thin;
+    font-family: Montserrat-Hairline;
     text-align: center;
-    margin-top: 1%;
     margin-left: auto;
     margin-right: auto;
     color: white;
-    width: 80%;
     height: 40%;
     display: block;
     padding-bottom: 1%;
-    text-shadow: 1px 1px 6px gray;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.40);
 
 }
 
 .junkiree{
     font-size: 5em;
-    font-family: roboto-thin;
-}
+    font-family: Montserrat-Hairline;
+    letter-spacing: 0.1px;
+    }
 .tagline{
     font-size: 0.9em;
     font-family: segoe ui;
     font-style: italic;
     display: block;
+    text-align: center;
+    color: white;
 }
 
 
-
-.screenshot{
-    margin-left: 25%;
-    margin-right: auto;
-    width: 300px;
-    height: 205px;
+.screenshot-box{
+    margin-top: 10px;
     display: block;
     text-align: center;
 }
 .description{
     font-family: raleway-normal;
 }
-
-
+.buttons{
+    display: block;
+}
 .download{
+    display: inline-block;
+    border-radius: 5px;
+    line-height: 40px;
     color: white;
-    width: 95%;
-    height: 50px;
+    width: 160px;
+    height: 40px;
     margin: 5px auto;
-    background-color: #2d9;
+    margin-right: 5px;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid white;
     text-shadow: 1px 1px 1.2px black;
 }
 .download:hover{
-    background-color: #27EFA6;
+    background-color: rgba(0,0,0,0.35);
 }
 .left{
     float: left;
@@ -212,34 +244,98 @@ border-bottom: 1px solid #25242c;
 .hide{
     display: none;
 }
-  
-.sidebar{
-    margin: 0;
-    font-family: source-sans;
-    top: 30%;
-    position: fixed;
-    border-right: 1px solid #fff;
+
+.junkiree-features{
+    clear: both;
+    text-align: center;
+    padding-top: 25px;
+
+    /*border-top: 1px solid white;*/
+    height: 100%;
+    margin-top: 12%;
+
+}
+.features-section{
+    padding: 5px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgba(0,0,0,0.12);
+    width: 29%;
+    margin: 10px;
+    font-size: 16px;
     color: white;
+    border-radius: 5px;
+}
+
+.features-border-middlex{
+
+    border-right: 1px solid white;
+    border-left: 1px solid white ;
+}
+.features-title{
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    text-shadow: 1px 2px 1px 1px black;
+    text-transform: uppercase;
+}
+
+
+
+/*
+.sidebar{
+    width: 180px;
+    height: 100%;
+    position: absolute;
+    font-family: raleway-normal;
+    color: white;line-height: 38px;
+}
+.sidebar .wrapper{
+
+    width: 180px;
+    position: relative;
+    border-right: 1px solid #fff;
 }
 .sidebar a:hover {
     opacity:0.70;
 }
 .sidebar a{
     color: white !important;
+    text-shadow: -.5px -.5px .2px white;
 }
+
 .sidebar li{
     list-style-type: none;
-    padding-top: 20px;
-    width: 180px ;
+    display: block;
+    width: 180px;
     height: 40px;
-    text-align: left;
-    vertical-align: middle;
+    text-align: center;
     white-space: nowrap;
 }
-.footer{
-
+*/
+footer{
+    margin-top: 5%;
+    margin-bottom: 10px;
+    font-family: raleway-normal, sans-serif;
+    font-size: 12px;
+    color: #C3C3C3;
+    text-align:center;
 
 }
+
+.feature-description{
+    font-size: 1em;
+}
+h2{
+
+    font-family: roboto-thin;
+    font-size: 1.9em;
+    text-align: center;
+    text-shadow: 1px 1px 6px black;
+    text-transform: uppercase;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -322,9 +418,73 @@ border-bottom: 1px solid #25242c;
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 40em) {
     /* Style adjustments for viewports that meet the condition */
+
+
+.main-body{
+    margin: 0px auto;
 }
+#features-page{
+    color: white;
+    
+
+}
+
+.features-section{
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 10px;
+
+}
+.features-border-middle{
+    border: none;
+}
+.screenshot{
+
+    width: 95%;
+    
+}
+
+.junkiree{
+
+    font-size: 3em;
+}
+}
+
+.sidebar{
+    /*position: fixed;*/
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.05);
+    margin:0;
+    padding: 0;
+    font-family: raleway-normal;
+    color: white;
+    text-align: center;
+    
+}
+
+.sidebar a{
+    color:white;
+}
+.sidebar a:hover{
+    opacity: 0.80;
+}
+
+.sidebar li{
+    list-style-type: none;
+    float: left;
+    width: 33.333333333333333%;
+    height: 50px;
+    line-height: 3;
+    white-space: nowrap;
+}
+
+
+
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),

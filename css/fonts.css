@@ -1,23 +1,29 @@
-@font-face {
+/*@font-face {
   font-family: 'roboto-thin';
   font-weight: normal;
   src: url(../fonts/roboto-thin.ttf);
   src: local ('Ø'),
   url(../fonts/roboto-thin.ttf) format('ttf');
 }
-
-/*
-@font-face {
-  font-family: 'kraken';
-  font-weight: normal;
-  src: url(../fonts/SourceSansPro-ExtraLight.otf);
-  src: local ('Ø'),
-  url(../fonts/SourceSansPro-ExtraLight.otf) format('otf');
-}
-
 */
 @font-face {
-  font-family: 'source-sans';
+  font-family: 'roboto-thin';
+  font-weight: normal;
+  src: url(../fonts/ProximaNova-Thin.otf);
+  src: local ('Ø'),
+  url(../fonts/ProximaNova-Thin.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Hairline';
+  font-weight: normal;
+  src: url(../fonts/Montserrat-Hairline.otf);
+  src: local ('Ø'),
+  url(../fonts/Montserrat-Hairline.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'raleway-normal';
   font-weight: normal;
   src: url(../fonts/raleway-regular.ttf);
   src: local ('Ø'),

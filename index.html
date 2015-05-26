@@ -8,8 +8,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/fonts.css">
@@ -18,21 +16,24 @@
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <![endif]-->    
 
         <!-- Add your site or application content here -->
 
-<div class="container">
+
 
     <div class="sidebar">
+       
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li></li>
-            <li><a href="#">Screenshots</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#main" id="home-link">Home</a></li>
+            <li><a href="#features" id="features-link">Features</a></li></li>
+            <li><a href="#about"id="about-link">About</a></li>
 
         </ul>
+        
     </div>
+
+<main class="main-body">
 
 <header class="title">
     <span class="junkiree">
@@ -43,32 +44,99 @@
     </span>
 </header>
 
-<main class="main-body">
-    <div id="main-page" class="">
+    <div id="main-page" class="animate hide">
 
-        <div class="screenshot">
+        <div class="screenshot-box">
             <a href="http://i.imgur.com/hipGV.png" target="_blank">
-                <img src="./img/screenshot.png"/>
+                <img src="./img/screenshot1.png" class="screenshot" />
             </a>
-
-            <button class="download">Download</button>
-            <a href="https://github.com/dineshkhadka/junkiree" target="_blank">
-                <span style="font-size: 14px">(view source on Github)</span>
+        <div class="buttons">
+        <a href="#">
+            <div class="download">Download</div>
             </a>
-
+           
+        <a href="https://github.com/dineshkhadka/junkiree" target="_blank">
+               <div class="download">View On Github</div>
+            </a>
         </div>
+         </div>
+        <div class="junkiree-features">
+            <div class="features-section">
+             <span class="features-title"> Fast </span>
+                 <p class="features-info">
+
+        Junkiree starts up and completely loads in just a few seconds. Thanks to its minimal dependencies.
+                  </p>
+
+            </div>
+
+            <div class="features-section features-border-middle">
+             <span class="features-title"> Simple </span>
+                 <p class="features-info">
+
+         Junkiree is simple and easy to use. Everything is laid out right where it must be.
+                  </p>
+
+            </div>
+
+            <div class="features-section">
+             <span class="features-title"> clean </span>
+                 <p class="features-info">
+
+         Junkiree is presented in a clean layout. A lot of focus has been given to the app design.
+                  </p>
+
+            
+
+         </div>
+       
+    </div>
+
+</div>
+    <div id="features-page" class="animate text-background hide">
+
+
+    <h2>Fast</h2>
+        <p class="feature-description">
+            Junkiree is built to be fast. It was built mostly using vanilla JS and thus doesn't summon thousands of line of code to perform a simple function. Junkiree only uses jQuery as the main framework. Nepali Date converter and jQuery Knob are bundled in to provide additional features to the app. More speed increases will be added along the way.
+        </p>
+
+
+    <h2>simple</h2>
+        <p class="feature-description">
+            Junkiree is extremly easy to use. Junkiree doesn't provide any fancy bloat but only the important features. The interface is easy for anyone to use. The app provides useful description and sticks to basic design flows to provide easy usage without any obstruction.
+
+            Plus, you are free to fiddle with the code.
+        </p>
+
+    <h2>Clean</h2>
+        <p class="feature-description">
+            Junkiree is free of clutter <!-- Unlike the code-->. The primary goal of junkiree was to try to display loadshedding with a interface that doesn't cause your eye to itch. I've seen a lot of Nepali apps that have made me cringe (not that I'm implying mine is any better).
+        </p>
+    </div>
+
+    <div id="about-page" class="text-background animate">
+    <h2>About Junkiree</h2>
+         <p class="features-description">
+
+            Junkiree was made due to lack of any loadshedding apps for the desktop platform or at least any usable ones. While the app has been open sourced in order to share the code, it was also because this my is first web app and I wanted people to suggest improvements to the code and the design. 
+             You can read the backstory behind junkiree in <a href="http://www.medium.com" target="_blank">this article</a>. The app will be soon available as a standalone desktop program for Windows, Mac and Linux (huzzah!).
+        </p>
+<h2>About The Author</h2>
+        <p class="features-description">
+             I'm no fancy developer. I'm a guy who knows coding, currently at the second year of my Bachelor in Business Studies. I love coding stuff and making things happen. I started out programming with Python and currently getting into javascript and all those front-end stuff.<!-- and currently hoping I can strike an internship with junkiree after two failed interviews (my <a href="http://elderscrolls.wikia.com/wiki/Speech" target="_blank">speechcraft</a> ain't my strongest suit). Wish me luck.
+             -->
+          </p>
     </div>
 
 
-    
-        <div class="features-page">
-        <h1>Features</h1>
-        </div>
 
-
-
+<footer>
+    Made by Dinesh Khadka
+</footer>
 
 </main>
+
 
 
 

@@ -3,3 +3,10 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
+
+
+# 'My minions! Today is the day! Robots shall finally crush the hu-.... hey, who the hell are you.
+# You're not supposed to be here.
+# GET OUT!!!
+
+

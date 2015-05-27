@@ -5,7 +5,7 @@
   src: local ('Ø'),
   url(../fonts/roboto-thin.ttf) format('ttf');
 }
-*/
+
 @font-face {
   font-family: 'roboto-thin';
   font-weight: normal;
@@ -31,3 +31,4 @@
 }
 
 
+*/

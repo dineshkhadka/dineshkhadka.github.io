@@ -292,7 +292,6 @@ border-bottom: 1px solid #25242c;
     color: white;line-height: 38px;
 }fdfdfdf
 .sidebar .wrapper{fdfdfdf
-
     width: 180px;fdfdfdf
     position: relative;
     border-right: 1px solid #fff;fdfdfdf
@@ -304,7 +303,6 @@ border-bottom: 1px solid #25242c;
     color: white !important;
     text-shadow: -.5px -.5px .2px white;
 }
-
 .sidebar li{
     list-style-type: none;
     display: block;

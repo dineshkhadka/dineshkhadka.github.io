@@ -15,17 +15,11 @@ html {
     font-size: 1em;
     line-height: 1.4;
     background-color: #7e7e7e;
-    /*
-        Server rendered pages like opera mini (extremely popular in Nepal)
-        wont have a fixed background
-        repeat the image to avoid any white backgrounds as the user scrolls down
-    */
-    background: url("../img/background7.jpg") center center fixed;
+    background: url(../img/background7.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    /*
-        Set the default postion to 0px to make sure the darker parts of the
-        images are under the title to compensate for dim brightness on mobile phones
-    */
     background-position: 0px;
     width: 100%;
     height: 100%;
@@ -33,13 +27,7 @@ html {
     margin:0;
 
 }
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
+
 
 ::-moz-selection {
     background: #999;
@@ -51,9 +39,6 @@ html {
     text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
 ul{
     margin: 0;
 }
@@ -66,11 +51,6 @@ hr {
     padding: 0;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
 audio,
 canvas,
@@ -81,9 +61,6 @@ video {
     vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
 
 fieldset {
     border: 0;
@@ -91,9 +68,6 @@ fieldset {
     padding: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
 
 textarea {
     resize: vertical;
@@ -112,10 +86,6 @@ a{
     text-decoration: none;
     color: #757575;
 }
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
@@ -212,6 +182,27 @@ border-bottom: 1px solid #25242c;
     display: block;
     text-align: center;
 }
+
+
+.sidebar{
+    
+    display: flex;
+    justify-content: space-around;
+    padding: 9px;
+    background-color: rgba(0,0,0,0.20);
+    font-family: 'Open sans';
+    color: white;
+    text-align: center;
+
+}
+
+.sidebar a{
+    color:white;
+}
+.sidebar a:hover{
+    opacity: 0.80;
+}
+
 .description{
     font-family: 'Open sans';
 }
@@ -268,11 +259,7 @@ border-bottom: 1px solid #25242c;
     border-radius: 5px;
 }
 
-.features-border-middlex{
 
-    border-right: 1px solid white;
-    border-left: 1px solid white ;
-}
 .features-title{
     text-align: center;
     display: block;
@@ -282,36 +269,6 @@ border-bottom: 1px solid #25242c;
 }
 
 
-
-/*
-.sidebar{fdfdfdf
-    width: 180px;
-    height: 100%;
-    position: absolute;
-    font-family: 'Open sans';
-    color: white;line-height: 38px;
-}fdfdfdf
-.sidebar .wrapper{fdfdfdf
-    width: 180px;fdfdfdf
-    position: relative;
-    border-right: 1px solid #fff;fdfdfdf
-}
-.sidebar a:hover {
-    opacity:0.70;
-}
-.sidebar a{
-    color: white !important;
-    text-shadow: -.5px -.5px .2px white;
-}
-.sidebar li{
-    list-style-type: none;
-    display: block;
-    width: 180px;
-    height: 40px;
-    text-align: center;
-    white-space: nowrap;
-}
-*/
 footer{
     margin-top: 5%;
     margin-bottom: 10px;
@@ -335,24 +292,11 @@ h2{
 }
 
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers:
- * http://juicystudio.com/article/screen-readers-display-none.php
- */
-
 .hidden {
     display: none !important;
     visibility: hidden;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
 
 .visuallyhidden {
     border: 0;
@@ -365,11 +309,6 @@ h2{
     width: 1px;
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
@@ -381,25 +320,12 @@ h2{
     width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
 
 .invisible {
     visibility: hidden;
 }
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+
 
 .clearfix:before,
 .clearfix:after {
@@ -450,36 +376,6 @@ h2{
 
     font-size: 3em;
 }
-}
-
-.sidebar{
-    /*position: fixed;*/
-    display: inline-block;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0,0,0,0.20);
-    margin:0;
-    padding: 0;
-    font-family: 'Open sans';
-    color: white;
-    text-align: center;
-
-}
-
-.sidebar a{
-    color:white;
-}
-.sidebar a:hover{
-    opacity: 0.80;
-}
-
-.sidebar li{
-    list-style-type: none;
-    float: left;
-    width: 33.333333333333333%;
-    height: 50px;
-    line-height: 3;
-    white-space: nowrap;
 }
 
 
